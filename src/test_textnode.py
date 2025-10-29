@@ -16,7 +16,7 @@ class TestTextNode(unittest.TestCase):
     def test_not_eq_different_type(self):
         node = TextNode("same", TextType.BOLD)
         node2 = TextNode("same", TextType.ITALIC)
-        self.assertEqual(node, node2)
+        self.assertNotEqual(node, node2)
 
     def test_eq_explicit_none_url(self):
         node = TextNode("same", TextType.CODE, None)
